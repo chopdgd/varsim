@@ -52,7 +52,7 @@ ART_DIR=${OPT_DIR}/ART
 if [[ ! -d ${ART_DIR} ]]; then
     mkdir -p ${ART_DIR}
     pushd ${ART_DIR}
-    wget -O- http://www.niehs.nih.gov/research/resources/assets/docs/artbinvanillaicecream031114linux64tgz.tgz | tar xfz -
+    wget -O- https://www.niehs.nih.gov/research/resources/assets/docs/artbinmountrainier2016.06.05linux64.tgz | tar xfz -
     popd
 fi
 
