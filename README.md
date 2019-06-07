@@ -4,10 +4,15 @@ See http://bioinform.github.io/varsim/ for help, downloads and webapps.
 
 
 # How to install varsim
-
+(if you are doing a fresh install)
 ```
 ./build.sh
 virtualenv -p python2.7 pyvenv
+source pyvenv/bin/activate
+pip install -r requirements.txt
+```
+(if you just want to activate pyenv from installed location)
+```
 source pyvenv/bin/activate
 pip install -r requirements.txt
 ```
