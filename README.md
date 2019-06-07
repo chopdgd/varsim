@@ -14,3 +14,26 @@ pip install -r requirements.txt
 
 **NOTE:** VarSim requires that you activate the pyvenv before running!
 **NOTE:** Make sure you have bedtools installed in your PATH
+
+# Examples
+
+## Targeted Capture
+
+```
+./varsim_multi.py \
+  --out_dir varsim_multi13 \
+  --reference /references/GRCh37/human_g1k_v37.fasta \
+  --regions opt/regions.bed \
+  --samples_random 1 \
+  --simulator_executable opt/ART/art_bin_MountRainier/art_illumina \
+  --simulator_options "-ss HS25 -sam -p -l 150 -f 20 -m 200 -s 10" \
+  --total_coverage 400 \
+  --force_five_base_encoding \
+  --lift_ref \
+  --loglevel debug \
+  --disable_rand_dgv \
+  --sampling_vcf /resources/dbsnp/20170403/All_20170403.vcf.gz \
+  --vc_num_snp 500 \
+  --vc_num_ins 15 \
+  --vc_num_del 15
+  ```
