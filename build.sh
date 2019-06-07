@@ -17,17 +17,6 @@ fi
 
 export PATH=${JDK8_DIR}/bin:${PATH}
 
-PYTHON_DIR=${OPT_DIR}/miniconda2
-CONDA=Miniconda2-latest-Linux-x86_64.sh
-if [[ ! -d ${PYTHON_DIR} ]]; then
-wget -q https://repo.continuum.io/miniconda/${CONDA}\
-    && sh ${CONDA} -b -p ${PYTHON_DIR}\
-    && ${PYTHON_DIR}/bin/python ${PYTHON_DIR}/bin/pip install pysam==0.15.0\
-    && ${PYTHON_DIR}/bin/python ${PYTHON_DIR}/bin/pip install pyvcf==0.6.8\
-    && ${PYTHON_DIR}/bin/python ${PYTHON_DIR}/bin/conda install --yes -c bioconda pybedtools=0.8.0 bedtools=2.25.0 \
-    && ${PYTHON_DIR}/bin/python ${PYTHON_DIR}/bin/pip install scipy==1.1.0\
-    && rm -f ${CONDA}
-fi
 
 MAVEN_DIR=${OPT_DIR}/apache-maven-3.5.4
 if [[ ! -d ${MAVEN_DIR} ]]; then
