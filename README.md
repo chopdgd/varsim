@@ -1,6 +1,6 @@
 <b>VarSim: A high-fidelity simulation validation framework for high-throughput genome sequencing with cancer applications</b>
 
-See http://bioinform.github.io/varsim/ for help, downloads and webapps. 
+See http://bioinform.github.io/varsim/ for help, downloads and webapps.
 
 
 # How to install varsim
@@ -33,7 +33,10 @@ pip install -r requirements.txt
   --loglevel debug \
   --disable_rand_dgv \
   --sampling_vcf /resources/dbsnp/20170403/All_20170403.vcf.gz \
-  --vc_num_snp 500 \
-  --vc_num_ins 15 \
-  --vc_num_del 15
+  --vc_num_snp 3000000 \
+  --vc_num_ins 100000 \
+  --vc_num_del 100000 \
+  --vc_num_mnp 20000 \
+  --vc_num_complex 20000 \
+  --vc_percent_novel 0.01
   ```
